@@ -1,5 +1,6 @@
 <?php
-use Database\Seeders\RolesAndPermissionsSeeder;
+
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
