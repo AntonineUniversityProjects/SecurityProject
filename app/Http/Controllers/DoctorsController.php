@@ -9,7 +9,7 @@ class DoctorsController extends Controller
 {
     public function create()
     {
-        return view('admin.Doctor.create');
+        return view('admin.doctor.create');
     }
 
     public function store(Request $request)
