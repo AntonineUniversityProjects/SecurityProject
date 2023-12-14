@@ -34,7 +34,7 @@ Route::middleware('auth')->group(function () {
 
 // , 'role:Admin'
 
-Route::middleware(['auth ', 'role:Admin'])->group(function () {
+Route::middleware('auth ')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
    
@@ -42,7 +42,7 @@ Route::middleware(['auth ', 'role:Admin'])->group(function () {
     Route::get('/admin/patients/create', [PatientsController::class, 'create'])->name('patients.create');
     Route::post('/admin/patients/store', [PatientsController::class, 'store'])->name('patients.store');
 });
-Route::middleware(['auth ', 'role:Doctor'])->group(function () {
+Route::middleware('auth')->group(function () {
 
 Route::get('/admin/doctors/create', [DoctorsController::class, 'create'])->name('doctors.create');
     Route::post('/admin/doctors/store', [DoctorsController::class, 'store'])->name('doctors.store');
