@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DoctorsController;
 use App\Http\Controllers\PatientsController;
@@ -31,32 +33,31 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-// routes/web.php
-
-// , 'role:Admin'
 
 Route::middleware('auth ')->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-
-   
-
     Route::get('/admin/patients/create', [PatientsController::class, 'create'])->name('patients.create');
     Route::post('/admin/patients/store', [PatientsController::class, 'store'])->name('patients.store');
 });
-Route::middleware('auth')->group(function () {
 
-Route::get('/admin/doctors/create', [DoctorsController::class, 'create'])->name('doctors.create');
+Route::middleware('auth')->group(function () {
+    Route::get('/admin/doctors/create', [DoctorsController::class, 'create'])->name('doctors.create');
     Route::post('/admin/doctors/store', [DoctorsController::class, 'store'])->name('doctors.store');
 });
 
 Route::middleware('auth')->group(function () {
-
-
-
-Route::get('/upload', [FileController::class, 'showUploadForm'])->name('upload.form');
-Route::post('/uploadfile', [FileController::class, 'upload'])->name('upload.post');
-
+    Route::get('/upload', [FileController::class, 'showUploadForm'])->name('upload.form');
+    Route::post('/uploadfile', [FileController::class, 'upload'])->name('upload.post');
 });
 
+// Handling ModelNotFoundException
+Route::fallback(function (Request $request) {
+    abort(404, "The resource at '{$request->url()}' could not be found.");
+});
+
+// Handling other types of exceptions globally
+Route::fallback(function () {
+    abort(500, 'Oops! Something went wrong.');
+});
 
 require __DIR__.'/auth.php';
