@@ -51,8 +51,11 @@ Route::get('/admin/doctors/create', [DoctorsController::class, 'create'])->name(
 
 Route::middleware('auth')->group(function () {
 
-Route::get('/upload', [FileController::class, 'showUploadForm']);
-Route::post('/upload', [FileController::class, 'upload']);
+
+
+Route::get('/upload', [FileController::class, 'showUploadForm'])->name('upload.form');
+Route::post('/uploadfile', [FileController::class, 'upload'])->name('upload.post');
+
 });
 
 
