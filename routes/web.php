@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DoctorsController;
 use App\Http\Controllers\PatientsController;
+use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,12 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/admin/doctors/create', [DoctorsController::class, 'create'])->name('doctors.create');
     Route::post('/admin/doctors/store', [DoctorsController::class, 'store'])->name('doctors.store');
+});
+
+Route::middleware('auth')->group(function () {
+
+Route::get('/upload', [FileController::class, 'showUploadForm']);
+Route::post('/upload', [FileController::class, 'upload']);
 });
 
 
