@@ -96,5 +96,6 @@ return array(
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
     'Aws\\' => array($vendorDir . '/aws/aws-sdk-php/src'),
+    'Appwrite\\ClamAV\\' => array($vendorDir . '/appwrite/php-clamav/src/ClamAV'),
     'App\\' => array($baseDir . '/app', $vendorDir . '/laravel/pint/app'),
 );

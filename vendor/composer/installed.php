@@ -3,13 +3,22 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '3d057d2751605f7ae4b2709ebeed3cafd0b8883c',
+        'reference' => 'd27c67f9a0d0e6e04c13e567cea9acab98b3c9df',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'appwrite/php-clamav' => array(
+            'pretty_version' => 'v1.0.1',
+            'version' => '1.0.1.0',
+            'reference' => '4c13abddfc89d59395da0bd75c18a8eeadc2a542',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../appwrite/php-clamav',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'aws/aws-crt-php' => array(
             'pretty_version' => 'v1.2.4',
             'version' => '1.2.4.0',
@@ -409,7 +418,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '3d057d2751605f7ae4b2709ebeed3cafd0b8883c',
+            'reference' => 'd27c67f9a0d0e6e04c13e567cea9acab98b3c9df',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

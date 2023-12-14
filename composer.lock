@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3c7c36ca44015aedc4036a88df04718",
+    "content-hash": "4dbc9d93ecd48b0a19f89d07c369ab07",
     "packages": [
+        {
+            "name": "appwrite/php-clamav",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/appwrite/php-clamav.git",
+                "reference": "4c13abddfc89d59395da0bd75c18a8eeadc2a542"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/appwrite/php-clamav/zipball/4c13abddfc89d59395da0bd75c18a8eeadc2a542",
+                "reference": "4c13abddfc89d59395da0bd75c18a8eeadc2a542",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Appwrite\\ClamAV\\": "src/ClamAV"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eldad Fux",
+                    "email": "eldad@appwrite.io"
+                }
+            ],
+            "description": "ClamAV network and pipe client for PHP",
+            "keywords": [
+                "anti virus",
+                "appwrite",
+                "clamav",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/appwrite/php-clamav/issues",
+                "source": "https://github.com/appwrite/php-clamav/tree/master"
+            },
+            "time": "2020-02-29T11:35:01+00:00"
+        },
         {
             "name": "aws/aws-crt-php",
             "version": "v1.2.4",

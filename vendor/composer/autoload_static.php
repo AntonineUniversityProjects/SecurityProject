@@ -186,6 +186,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'A' => 
         array (
             'Aws\\' => 4,
+            'Appwrite\\ClamAV\\' => 16,
             'App\\' => 4,
         ),
     );
@@ -556,6 +557,10 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         array (
             0 => __DIR__ . '/..' . '/aws/aws-sdk-php/src',
         ),
+        'Appwrite\\ClamAV\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/appwrite/php-clamav/src/ClamAV',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -635,6 +640,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
         'App\\Models\\Admin' => __DIR__ . '/../..' . '/app/Models/Admin.php',
         'App\\Models\\Doctor' => __DIR__ . '/../..' . '/app/Models/Doctor.php',
+        'App\\Models\\File' => __DIR__ . '/../..' . '/app/Models/File.php',
         'App\\Models\\Patient' => __DIR__ . '/../..' . '/app/Models/Patient.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -644,6 +650,9 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
+        'Appwrite\\ClamAV\\ClamAV' => __DIR__ . '/..' . '/appwrite/php-clamav/src/ClamAV/ClamAV.php',
+        'Appwrite\\ClamAV\\Network' => __DIR__ . '/..' . '/appwrite/php-clamav/src/ClamAV/Network.php',
+        'Appwrite\\ClamAV\\Pipe' => __DIR__ . '/..' . '/appwrite/php-clamav/src/ClamAV/Pipe.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Aws\\ACMPCA\\ACMPCAClient' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/ACMPCA/ACMPCAClient.php',
         'Aws\\ACMPCA\\Exception\\ACMPCAException' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/ACMPCA/Exception/ACMPCAException.php',
