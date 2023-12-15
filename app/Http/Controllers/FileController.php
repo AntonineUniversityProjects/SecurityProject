@@ -23,7 +23,7 @@ class FileController extends Controller
         $fileDetails = [
             'filename' => $file->getClientOriginalName(),
             'uploaded_at' => now(),
-            // Add any other fields as needed
+            
         ];
 
         // Use the File model to insert the file details into the database

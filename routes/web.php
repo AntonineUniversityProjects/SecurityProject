@@ -48,12 +48,14 @@ Route::middleware('auth')->group(function () {
 Route::fallback(function (Request $request) {
     abort(404, "The resource at '{$request->url()}' could not be found.");
 });
- Route::get('/doctor/dashboard', [DoctorControllerRoute::class, 'dashboard'])->name('admin.doctor.dashboard');
-// routes/web.php or routes/api.php
-// Route::middleware(['auth', 'doctor'])->group(function () {
-   
-//     // Add other routes accessible only by doctors
-// });
+
+
+Route::middleware(['auth', 'doctor'])->group(function () {
+    
+    // only accessible with doctor route
+    Route::get('/doctor/dashboard', [DoctorControllerRoute::class, 'dashboard'])->name('admin.doctor.dashboard');
+    
+});
 
 
 // Handling other types of exceptions globally

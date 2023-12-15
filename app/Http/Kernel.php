@@ -71,7 +71,6 @@ class Kernel extends HttpKernel
    
 
 protected $routeMiddleware = [
-    // ...
     'doctor' => \App\Http\Middleware\DoctorMiddleware::class,
 ];
 
